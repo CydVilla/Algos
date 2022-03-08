@@ -1,3 +1,5 @@
+// Character-counter
+
 // const validateWord = (s)  => {
 //     let data = {}
 //     let targetNumber = 0
