@@ -12,9 +12,9 @@ const findShort = (s) => {
   }
 
 
-const findShort = (s) => s.split(' ').reduce((a, b) => {
-  return b.length < a.length ? b : a
-}).length
+// const findShort = (s) => s.split(' ').reduce((a, b) => {
+//   return b.length < a.length ? b : a
+// }).length
 
 
 console.log(findShort("bitcoin take over the world maybe who knows perhaps"));

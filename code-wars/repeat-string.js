@@ -8,12 +8,12 @@ const repeatStr = (n, s) => {
     return repeatedStr 
   }
   
-  const repeatStr = (n, s) => {
-  let repeatedStr = ''
-  let i = 0
-  while (i < n) {
-    repeatedStr += s
-    i++;
-  }
-    return repeatedStr
-  }
+  // const repeatStr = (n, s) => {
+  // let repeatedStr = ''
+  // let i = 0
+  // while (i < n) {
+  //   repeatedStr += s
+  //   i++;
+  // }
+  //   return repeatedStr
+  // }
