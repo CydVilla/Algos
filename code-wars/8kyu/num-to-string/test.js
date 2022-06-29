@@ -1,4 +1,4 @@
-import {numberToString} from '../num-to-string';
+import {numberToString} from './num-to-string';
 
 
 test('adds a string to a number', () => {

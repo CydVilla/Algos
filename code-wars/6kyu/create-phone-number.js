@@ -1,4 +1,4 @@
-const  createPhoneNumber = (numbers) => {
+const createPhoneNumber = (numbers) => {
     let result = "("
     for (let i = 0; i < numbers.length; i++) {
       let current = numbers[i]
