@@ -7,18 +7,16 @@ test("Sample tests", () => {
     { firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
     { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
   ];
+  expect(countDevelopers(list1)).toBe(1, "Noah is the only JavaScript developer from Europe")
 
-  it("should find JavaScript developers from Europe", () => {
-    assert.strictEqual(countDevelopers(list1), 1, "Noah is the only JavaScript developer from Europe");
-  });
-  
   const list2 = [
     { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 19, language: 'HTML' },
     { firstName: 'Lukas', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'HTML' }
   ];
   
-  it("should not find HTML developers from Europe", () => {
-    assert.strictEqual(countDevelopers(list2), 0, "Lukas is not a JS devolper");
+  expect(countDevelopers(list2)).toBe(0, "Lukas is not a JS developer")
   });
-  });
+
+
+
   
