@@ -8,3 +8,5 @@ export const isRubyComing = (list) => {
   }
 
   // export const isRubyComing = (list) => list.filter(i => i.language === 'Ruby').length ? true : false
+
+  // export const isRubyComing = (list) => list.some(i => i.language === 'Ruby') 
