@@ -16,7 +16,3 @@ test("Sample tests", () => {
   
   expect(countDevelopers(list2)).toBe(0, "Lukas is not a JS developer")
   });
-
-
-
-  
