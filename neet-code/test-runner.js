@@ -17,6 +17,13 @@ import Solution11 from './best-time-to-buy-and-sell-stock.js';
 import Solution12 from './longest-substring-without-repeating-characters.js';
 import Solution13 from './longest-repeating-character-replacement.js';
 import Solution14 from './permutation-in-string.js';
+import Solution15 from './valid-parentheses.js';
+import MinStack from './min-stack.js';
+import Solution17 from './evaluate-reverse-polish-notation.js';
+import Solution18 from './generate-parentheses.js';
+import Solution19 from './daily-temperatures.js';
+import Solution20 from './car-fleet.js';
+import Solution21 from './largest-rectangle-in-histogram.js';
 
 class TestRunner {
     constructor() {
@@ -309,6 +316,147 @@ class TestRunner {
             solution14.checkInclusion,
             false,
             solution14.checkInclusion("abc", "lecaabee")
+        );
+
+        // Test 15: Valid Parentheses
+        console.log('\n📋 Test 15: Valid Parentheses');
+        const solution15 = new Solution15();
+        
+        this.runTest(
+            'Example 1: "[]"',
+            solution15.isValid,
+            true,
+            solution15.isValid("[]")
+        );
+        
+        this.runTest(
+            'Example 2: "([{}])"',
+            solution15.isValid,
+            true,
+            solution15.isValid("([{}])")
+        );
+        
+        this.runTest(
+            'Example 3: "[(])"',
+            solution15.isValid,
+            false,
+            solution15.isValid("[(])")
+        );
+
+        // Test 16: Minimum Stack
+        console.log('\n📋 Test 16: Minimum Stack');
+        const minStack = new MinStack();
+        minStack.push(1);
+        minStack.push(2);
+        minStack.push(0);
+        
+        this.runTest(
+            'getMin() after push(1,2,0)',
+            null,
+            0,
+            minStack.getMin()
+        );
+        
+        minStack.pop();
+        
+        this.runTest(
+            'top() after pop()',
+            null,
+            2,
+            minStack.top()
+        );
+        
+        this.runTest(
+            'getMin() after pop()',
+            null,
+            1,
+            minStack.getMin()
+        );
+
+        // Test 17: Evaluate Reverse Polish Notation
+        console.log('\n📋 Test 17: Evaluate Reverse Polish Notation');
+        const solution17 = new Solution17();
+        
+        this.runTest(
+            'Example 1: ["1","2","+","3","*","4","-"]',
+            solution17.evalRPN,
+            5,
+            solution17.evalRPN(["1","2","+","3","*","4","-"])
+        );
+
+        // Test 18: Generate Parentheses
+        console.log('\n📋 Test 18: Generate Parentheses');
+        const solution18 = new Solution18();
+        
+        this.runTest(
+            'Example 1: n=1',
+            solution18.generateParenthesis,
+            ["()"],
+            solution18.generateParenthesis(1)
+        );
+        
+        const result18_2 = solution18.generateParenthesis(3);
+        const expected18_2 = ["((()))","(()())","(())()","()(())","()()()"];
+        
+        this.runTest(
+            'Example 2: n=3',
+            solution18.generateParenthesis,
+            expected18_2.sort(),
+            result18_2.sort()
+        );
+
+        // Test 19: Daily Temperatures
+        console.log('\n📋 Test 19: Daily Temperatures');
+        const solution19 = new Solution19();
+        
+        this.runTest(
+            'Example 1: [30,38,30,36,35,40,28]',
+            solution19.dailyTemperatures,
+            [1,4,1,2,1,0,0],
+            solution19.dailyTemperatures([30,38,30,36,35,40,28])
+        );
+        
+        this.runTest(
+            'Example 2: [22,21,20]',
+            solution19.dailyTemperatures,
+            [0,0,0],
+            solution19.dailyTemperatures([22,21,20])
+        );
+
+        // Test 20: Car Fleet
+        console.log('\n📋 Test 20: Car Fleet');
+        const solution20 = new Solution20();
+        
+        this.runTest(
+            'Example 1: target=10, position=[1,4], speed=[3,2]',
+            solution20.carFleet,
+            1,
+            solution20.carFleet(10, [1,4], [3,2])
+        );
+        
+        this.runTest(
+            'Example 2: target=10, position=[4,1,0,7], speed=[2,2,1,1]',
+            solution20.carFleet,
+            3,
+            solution20.carFleet(10, [4,1,0,7], [2,2,1,1])
+        );
+
+        // Test 21: Largest Rectangle In Histogram
+        console.log('\n📋 Test 21: Largest Rectangle In Histogram');
+        const solution21 = new Solution21();
+        
+        this.runTest(
+            'Example 1: [7,1,7,2,2,4]',
+            solution21.largestRectangleArea,
+            8,
+            solution21.largestRectangleArea([7,1,7,2,2,4])
+        );
+        
+        this.runTest(
+            'Example 2: [1,3,7]',
+            solution21.largestRectangleArea,
+            7,
+            solution21.largestRectangleArea([1,3,7])
         );
 
         // Print summary
